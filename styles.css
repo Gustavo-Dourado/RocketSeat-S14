@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+html{
+font-size: 62.5%;
+/* 1rem = 10px*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+:root{
+    --tituloColor: #B52184;
+    --textColor: #312D64;
+    --linearColor: rgba(49,45,100,1) 0%, rgba(48,44,99,1) 100%;
+}
+
+body{
+    font-size: 1.6rem;
+    /* retomar o tamanho base de 16px para a fonte no documento */
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(160deg, var(--linearColor));
+}
+
+#capa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 28px;
+    padding: 0 32px 100px 90px;
+    background: #F9F4FB;
+}
+
+#image-capa-container{
+    min-width: 320px;
+    max-width: 720px;
+    width: 100%;
+}
+
+.image-capa{
+    width: 100%;
+    height: auto;
+} 
+
+.resto-capa{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 180px;
+}
+
+#titulo-capa{
+    white-space: nowrap;
+    color: var(--tituloColor);
+    font-weight: 900;
+    font-size: clamp(2.65rem, 7vw, 5.8rem);
+}
+
+#sub-titulo-capa{
+    white-space: nowrap;
+    color: var(--textColor);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3.8vw, 3.2rem);
+}
+
+#conteudo{
+    width: 100%;
+    padding: 64px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 50px;
+    column-gap: 60px;
+}
+
+
+.card-planeta{
+    width: 100%;
+    max-width: 366px;
+    min-width: 310px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 13px 48px 32px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+.planet-img{
+    width: 97px;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-top: 32px;
+}
+
+.sub-titulos{
+    white-space: nowrap;
+    color: var(--tituloColor);
+    font-size: clamp(2.8rem, 7vw, 3.2rem);
+    font-weight: 900;
+}
+
+.text-content{
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+#formulario{
+    width: 100%;
+    background-color: #F9F4FB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 80px;
+    padding-left: 100px;
+}
+
+form{
+    
+    max-width: 592px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+    margin: 80px 0;
+}
+
+#titulo-form{
+    white-space: nowrap;
+    font-size: clamp(3.2rem, 7vw, 4.2rem);
+    font-weight: 900;
+    color: var(--tituloColor);
+}
+
+input{
+    all: unset;
+    width: 100%;
+    color: var(--textColor);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input::placeholder{
+    color: #312D64;
+}
+
+.container-dados{
+    width: 100%;
+    border: 1.5px solid #312D64;
+    border-radius: 16px;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.nome{
+    margin-top: 19px;
+}
+
+textarea{
+    all: unset;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1.5px solid #312D64;
+    border-radius: 16px;
+    color: var(--textColor);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 16px 16px;
+}
+
+textarea::placeholder{
+    color: #312D64;
+} 
+
+button{
+    width: 150px;
+    height: 45px;
+    padding: 10.5px 16px;
+    background: linear-gradient(160deg, var(--linearColor));
+    border: none;
+    border-radius: 16px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover{
+   background: rgba(49,45,100,0.7);
+   color: var(--tituloColor);
+}
+
+#image-form{
+    max-width: 644px;
+    width: 100%;
+}
+
+#image-form img{
+    width: 100%;
+    height: 612px;
+}
+
+footer{
+    width: 100%;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+#text-footer{
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+@media(max-width: 1200px){
+
+    #capa{
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 40px;
+        padding-left: 32px;
+    }
+
+    .resto-capa{
+        align-items: center; 
+        row-gap: 90px;
+    }
+
+    #titulos{
+        text-align: center;
+    }
+
+    #conteudo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #formulario{
+        justify-content: center;
+        padding: 0 40px;
+    }
+
+    #image-form{
+        display: none;
+    }
+}
+
+@media (max-width: 430px){
+    #formulario{
+        justify-content: center;
+        padding: 0 20px;
+    }
+}
